@@ -40,12 +40,12 @@ public class DropdownAlert: UIView {
     }()
 
         /// Alert message label.
-    private lazy var messageLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .Center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    private lazy var messageLabel: UILabel = {
+//        let label = UILabel()
+//        label.textAlignment = .Center
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
 
     // MARK: - Defaults
 
@@ -115,9 +115,9 @@ public extension DropdownAlert {
             let dropdown = DropdownAlert()
             dropdown.translatesAutoresizingMaskIntoConstraints = false
             dropdown.titleLabel.text = title
-            dropdown.messageLabel.text = message
+//            dropdown.messageLabel.text = message
             dropdown.titleLabel.textColor = textColor
-            dropdown.messageLabel.textColor = textColor
+//            dropdown.messageLabel.textColor = textColor
             dropdown.backgroundColor = backgroundColor
 
             // Construct a padding view that will cover the top of the dropdown in the case of a spring animation where it bounces past it's bounds
@@ -272,10 +272,10 @@ private extension DropdownAlert {
      */
     private func commonInit() {
         self.titleLabel.font = Defaults.TitleFont
-        self.messageLabel.font = Defaults.MessageFont
+//        self.messageLabel.font = Defaults.MessageFont
 
         self.addSubview(self.titleLabel)
-        self.addSubview(self.messageLabel)
+//        self.addSubview(self.messageLabel)
         self.setupConstraints()
     }
 
@@ -286,11 +286,12 @@ private extension DropdownAlert {
         self.addConstraint(NSLayoutConstraint(item: self.titleLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: self.titleLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: self.titleLabel, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1, constant: 0))
-
-        self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Top, relatedBy: .Equal, toItem: self.titleLabel, attribute: .Bottom, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: self.titleLabel, attribute: .Height, relatedBy: .Equal, toItem: self, attribute: .Height, multiplier: 1, constant: 0))
+        
+//        self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
+//        self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Top, relatedBy: .Equal, toItem: self.titleLabel, attribute: .Bottom, multiplier: 1, constant: 0))
+//        self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: 0))
+//        self.addConstraint(NSLayoutConstraint(item: self.messageLabel, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1, constant: 0))
 
         self.layoutIfNeeded()
 
