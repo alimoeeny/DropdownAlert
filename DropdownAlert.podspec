@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DropdownAlert'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'Customizable, simple, dropdown alert written in Swift.'
 
 # This description is used to generate tags and improve search results.
@@ -21,13 +21,13 @@ Pod::Spec.new do |s|
 DropdownAlert offers a simple, easy-to-use alternative to RKDropdownAlert, written entirely in Swift. DropdownAlert is responsive and powered by Facebook's pop animation engine.
                        DESC
 
-  s.homepage         = 'https://github.com/startupthekid/DropdownAlert'
+  s.homepage         = 'https://github.com/alimoeeny/DropdownAlert'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Brendan Conron' => 'conronb@gmail.com' }
-  s.source           = { :git => 'https://github.com/startupthekid/DropdownAlert.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/startupthekid'
+  s.author           = { 'Brendan Conron' => 'alimoeeny@gmail.com' }
+  s.source           = { :git => 'https://github.com/alimoeeny/DropdownAlert.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/alimoeeny'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'DropdownAlert/Classes/*'
   
